@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt update -y && apt upgrade -y
 RUN apt install -y clang python3-full curl zsh python3-pip git valgrind
 RUN apt install -y lsb-release
-RUN apt install -y libbsd0
+RUN apt install -y libbsd0 libbsd-dev
 RUN <<HERE bash
 	python3 -m venv /root/.venv
 	source /root/.venv/bin/activate
